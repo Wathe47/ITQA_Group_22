@@ -65,11 +65,11 @@ jobs:
         working-directory: ./Project
 
       - name: Generate UI HTML report
-        run: npm run generate-ui-html-report
+        run: npx generate-ui-html-report
         working-directory: ./Project
 
       - name: Generate API HTML report
-        run: npm run generate-api-html-report
+        run: npx generate-api-html-report
         working-directory: ./Project
 
       - name: Stop API server

@@ -13,8 +13,8 @@
       "report:ubuntu": "xdg-open reports/cucumber-report.html",
       "report:ui:ubuntu": "xdg-open reports/ui-cucumber-report.html",
       "report:api:ubuntu": "xdg-open reports/api-cucumber-report.html",
-      "generate-ui-html-report": "cucumber-html-reporter --source Project/reports/ui-cucumber-report.json --output Project/reports/ui-cucumber-report.html",
-      "generate-api-html-report": "cucumber-html-reporter --source Project/reports/api-cucumber-report.json --output Project/reports/api-cucumber-report.html"
+      "generate-ui-html-report": "npx cucumber-html-reporter --source Project/reports/ui-cucumber-report.json --output Project/reports/ui-cucumber-report.html",
+      "generate-api-html-report": "npx cucumber-html-reporter --source Project/reports/api-cucumber-report.json --output Project/reports/api-cucumber-report.html"
    },
    "devDependencies": {
       "@babel/core": "^7.26.0",
