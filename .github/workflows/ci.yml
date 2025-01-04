@@ -72,29 +72,29 @@ jobs:
         run: pkill -f 'java -jar demo-0.0.1-SNAPSHOT.jar'
         working-directory: ./Project
 
-      - name: Generate UI test report
+      - name: Upload UI test report
         uses: actions/upload-artifact@v3
         with:
           name: ui-cucumber-report
-          path: Profile/reports/ui-cucumber-report.json
+          path: Project/reports/ui-cucumber-report.json
 
-      - name: Generate API test report
+      - name: Upload API test report
         uses: actions/upload-artifact@v3
         with:
           name: api-cucumber-report
-          path: Profile/reports/api-cucumber-report.json
+          path: Project/reports/api-cucumber-report.json
           
-      - name: Generate UI HTML report
+      - name: Upload UI HTML report
         uses: actions/upload-artifact@v3
         with:
           name: ui-cucumber-report-html
-          path: Profile/reports/ui-cucumber-report.html
+          path: Project/reports/ui-cucumber-report.html
 
-      - name: Generate API HTML report
+      - name: Upload API HTML report
         uses: actions/upload-artifact@v3
         with:
           name: api-cucumber-report-html
-          path: Profile/reports/api-cucumber-report.html
+          path: Project/reports/api-cucumber-report.html
 
       - name: Display instructions to open the report
         run: |
