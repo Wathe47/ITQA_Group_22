@@ -55,9 +55,10 @@ jobs:
         working-directory: ./Project
         continue-on-error: true
 
-      - name: Generate API HTML report
-        run: npx cucumber-html-reporter
+      - name: Run UI tests
+        run: npm run test:ui
         working-directory: ./Project
+        continue-on-error: true
 
       - name: Stop API server
         run: pkill -f 'java -jar demo-0.0.1-SNAPSHOT.jar'
