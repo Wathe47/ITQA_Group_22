@@ -60,29 +60,37 @@ jobs:
         working-directory: ./Project
         continue-on-error: true
 
+      - name: Generate UI HTML report
+        run: npm run generate-ui-html-report
+        working-directory: ./Project
+
+      - name: Generate API HTML report
+        run: npm run generate-api-html-report
+        working-directory: ./Project
+
       - name: Stop API server
         run: pkill -f 'java -jar demo-0.0.1-SNAPSHOT.jar'
         working-directory: ./Project
 
-      - name: Upload UI test report
+      - name: Generate UI test report
         uses: actions/upload-artifact@v3
         with:
           name: ui-cucumber-report
           path: Profile/reports/ui-cucumber-report.json
 
-      - name: Upload API test report
+      - name: Generate API test report
         uses: actions/upload-artifact@v3
         with:
           name: api-cucumber-report
           path: Profile/reports/api-cucumber-report.json
           
-      - name: Upload UI HTML report
+      - name: Generate UI HTML report
         uses: actions/upload-artifact@v3
         with:
           name: ui-cucumber-report-html
           path: Profile/reports/ui-cucumber-report.html
 
-      - name: Upload API HTML report
+      - name: Generate API HTML report
         uses: actions/upload-artifact@v3
         with:
           name: api-cucumber-report-html
