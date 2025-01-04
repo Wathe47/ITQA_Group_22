@@ -58,6 +58,7 @@ jobs:
       - name: Generate API HTML report
         run: npm run generate-api-html-report
         working-directory: ./Project
+        continue-on-error: true
 
       - name: Stop API server
         run: pkill -f 'java -jar demo-0.0.1-SNAPSHOT.jar'
