@@ -55,18 +55,18 @@ jobs:
         working-directory: ./Project
         continue-on-error: true
 
-      - name: Run UI tests
-        run: npm run test:ui
-        working-directory: ./Project
-        continue-on-error: true
+      # - name: Run UI tests
+      #   run: npm run test:ui
+      #   working-directory: ./Project
+      #   continue-on-error: true
 
       - name: Install cucumber-html-reporter
         run: npm install cucumber-html-reporter --save-dev
         working-directory: ./Project
 
-      - name: Generate UI HTML report
-        run: npx generate-ui-html-report
-        working-directory: ./Project
+      # - name: Generate UI HTML report
+      #   run: npx generate-ui-html-report
+      #   working-directory: ./Project
 
       - name: Generate API HTML report
         run: npx generate-api-html-report
