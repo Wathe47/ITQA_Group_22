@@ -68,25 +68,29 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: ui-cucumber-report
-          path: Project/reports/ui-cucumber-report.json
+          path: reports/ui-cucumber-report.json
+          working-directory: ./Project
 
       - name: Upload API test report
         uses: actions/upload-artifact@v3
         with:
           name: api-cucumber-report
-          path: Project/reports/api-cucumber-report.json
+          path: reports/api-cucumber-report.json
+          working-directory: ./Project
           
       - name: Upload UI HTML report
         uses: actions/upload-artifact@v3
         with:
           name: ui-cucumber-report-html
-          path: Project/reports/ui-cucumber-report.html
+          path: reports/ui-cucumber-report.html
+          working-directory: ./Project
 
       - name: Upload API HTML report
         uses: actions/upload-artifact@v3
         with:
           name: api-cucumber-report-html
-          path: Project/reports/api-cucumber-report.html
+          path: reports/api-cucumber-report.html
+          working-directory: ./Project
 
       - name: Display instructions to open the report
         run: |
