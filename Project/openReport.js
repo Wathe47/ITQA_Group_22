@@ -4,7 +4,6 @@ const fs = require('fs');
 
 const reportPath = path.join(__dirname, 'reports', 'cucumber-report.html');
 
-// Wait for the report file to be generated
 const maxRetries = 10;
 const retryInterval = 500; // 500ms
 
@@ -21,7 +20,6 @@ function checkFileExists(retryCount = 0) {
             return;
         }
 
-        // File exists, open it
         open(reportPath)
             .then(() => {
                 console.log('Report opened successfully!');
@@ -33,5 +31,4 @@ function checkFileExists(retryCount = 0) {
     });
 }
 
-// Start checking for the file
 checkFileExists();
